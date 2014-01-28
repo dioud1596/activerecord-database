@@ -5,11 +5,12 @@ database_path = "db/jukebox.sqlite"
 db = SQLite3::Database.new(database_path)
 
 # 1. returns the list of tracks with their album and artist
-tracks = # your code here
+tracks = db.execute("SELECT Track.Name, Album.Title, Artist.Name From Album INNER JOIN Track on Track.AlbumId = Album.AlbumId INNER JOIN Artist ON Artist.ArtisteId = Album.ArtisteId")
 
-
+                                                                           
 # 2. For each genre of music, finds the number of tracks and the average song length.
 # your code here.
+genre_count = db.execute("SELECT GenreId, COUNT(*), AVG(Milliseconds) FROM Track GROUP BY GenreId")
 
 
 # 3. List the top 5 rock artists
