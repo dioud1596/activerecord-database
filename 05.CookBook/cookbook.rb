@@ -19,7 +19,7 @@ if choice == 1
    length = gets.chomp.to_i
  puts "What is the difficulty (on a scale of 3)?"
    difficulty = gets.chomp.to_i
- recipe = Recipe.create(name: name, description: description, length: length, difficulty: difficulty)
+ rgit addecipe = Recipe.create(name: name, description: description, length: length, difficulty: difficulty)
  puts "Added!"
 elsif choice == 2
  Recipe.delete_all
