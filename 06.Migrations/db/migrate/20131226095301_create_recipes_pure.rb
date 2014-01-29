@@ -1,7 +1,7 @@
-class CreateRecipes < ActiveRecord::Migration
+class CreateRecipesPure < ActiveRecord::Migration
   def up
     # your code here to create the Recipes table
-    create_table :create_recipes do |t|
+    create_table :recipes do |t|
       t.string :name
       t.string :description
       t.integer :length
@@ -9,6 +9,6 @@ class CreateRecipes < ActiveRecord::Migration
     end
   end
   def down
-    drop_table :create_recipes
+    drop_table :recipes
   end
 end
