@@ -1,3 +1,3 @@
 class Recipe < ActiveRecord::Base
-  # your code here
+  belongs_to :cooker, class_name: 'User', foreign_key: 'user_id'
 end
